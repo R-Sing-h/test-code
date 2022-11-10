@@ -2,13 +2,11 @@
 
 
   - name: "transfering file from one server to another"
-    hosts: [fellowship]
+    hosts: #enter host group or ip address
     become: yes #execute as root
     tasks:
 
      - name: "moving one file from one server to another"
        synchronize:
-         src: /home/vagrant/test
-         dest: /home/vagrant/end
-       delegate_to: gandalf
-
+         src: #enter path of what is being copied
+         dest: #enter destination path
