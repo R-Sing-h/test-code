@@ -1,14 +1,14 @@
 ---
 
 
-    - name: "transfering file from one server to another"
-      hosts: #enter host name or ip
-      became: yes #execute as root
-      tasks:
-        
-        - name: "moving one file from one server to another"
-          synchonize: 
-            src: #path on the origin "Server_A"
-            dest: #path on the receiving "Server_B"
-          delegate_to: #always the server where the file is coming from 
+  - name: "transfering file from one server to another"
+    hosts: [fellowship]
+    become: yes #execute as root
+    tasks:
+
+     - name: "moving one file from one server to another"
+       synchronize:
+         src: /home/vagrant/test
+         dest: /home/vagrant/end
+       delegate_to: gandalf
 
