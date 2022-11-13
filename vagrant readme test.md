@@ -1,9 +1,16 @@
 # Vagrant.readme
 This file will be a brief overview of the operations of Vagrant.
 
-**Website**: https://www.vagrantup.com/
+**[Vagrant Website](https://www.vagrantup.com/)**
 
 **Source**: https://github.com/hashicorp/vagrant
 
-**HashiCorp Discuss**: https://discuss.hashicorp.com/c/vagrant/24
+**[HashiCorp Fourm](https://discuss.hashicorp.com/c/vagrant/24)** 
+
+
+
+```diff
+++ this text is highlighted in blue
+- this text is highlighted in red
+```
 
