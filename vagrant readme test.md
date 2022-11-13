@@ -1,4 +1,4 @@
-<p align="center"><img src="https://css-tricks.com/wp-content/uploads/2015/05/vagrant-logo.png"></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/150px-Vagrant.png"></p>
 
 # Vagrant.readme
 This file will be a brief overview of the operations of Vagrant.
