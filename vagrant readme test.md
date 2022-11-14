@@ -1,7 +1,7 @@
 <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/150px-Vagrant.png"></p>
 
 # Vagrant.readme
-This file will be a brief overview of the operations of Vagrant. This readme will be specific for our uses within this project, thus will focus on containing information relevant to our use case. This guide will use ***Ubuntu 22.04.1 LTS*** as a base, so syntax will follow those used with that OS. 
+This file will be an overview of the operations of Vagrant. This readme will be specific for our uses within this project, thus will focus on containing information relevant to our use case. This guide will use ***Ubuntu 22.04.1 LTS*** as a base, so syntax will follow those used with that OS. 
 
 **[Vagrant Website](https://www.vagrantup.com/)**
 
