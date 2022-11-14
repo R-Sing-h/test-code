@@ -44,7 +44,7 @@ In **Software Store** search for the **"Software"** application.
 Search for ***VirtualBox*** making sure the version is not newer than **6.1.xx**, as of 11/13/22 ***Vargant*** is not compatiable will newer versions.
 <p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/02-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p>  
 
-User who is installing must belong to the **SUDO GROUP** to proceed with the software installation the software.
+User who is installing must belong to the **SUDO group** to proceed with the software installation the software.
 <p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/04-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p> 
 
 Once installation of ***VirtualBox*** has been completed, we are ready to launch! Have Fun!
