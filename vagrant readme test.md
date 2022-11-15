@@ -95,16 +95,19 @@ Vagrant 2.2.19
 ```
 If all this has been successful we have installed ***Vagrant*** on our machine. Congratulations!
 
-### Creating a Project Directory
+### Initialize a Project Directory
 
-
-##### Vagrantfile
-More in-dept tutorial information can be found here [Here](https://developer.hashicorp.com/vagrant/docs/vapaths%20in%20order%20for%20a%20Vagrantfile,%20until%20it%20finds%20one:%20/home/mitchellh/projects/foo/Vagrantfile%20/home/mitchellh/projects/Vagrantfile%20/home/mitchellh/Vagrantfile%20/home/Vagrantfilegrantfile).
+More in-dept tutorial information can be found here [Here](https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-project-setup).
 
 At this point in the setup process I would advise that we make a directory on our local machine. That directory will be the "base of operations" for everything associated with our project. 
 ```
 $ sudo mkdir "name_of_folder" (without quotes)
 ```
-After running that command we should have a directory in which we can creat 
+After running that command we should have a directory in which we can create the **Vagrantfile** itself. Navigate to that folder and then we can create the **Vagrantfile** by using the following command.
 
-Within the Vagranfile we will find what equates to the blueprints for any of our virtual machines that we can run. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
+```
+$ vagrant init
+```
+
+ 
+The Vagrantfile is essientally what equates to the blueprints for all of the virtual machines that we can run. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
