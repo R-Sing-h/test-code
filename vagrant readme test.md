@@ -1,7 +1,7 @@
 <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/150px-Vagrant.png"></p>
 
 # Vagrant.readme
-This file will be an overview of the operations of Vagrant. This readme will be specific for our uses within this project, thus will focus on containing information relevant to our use case. This guide will use ***Ubuntu 22.04.1 LTS*** as a base, so syntax will follow those used with that OS. 
+This file will be an overview of the installation and operations of Vagrant. This readme will be specific for our uses within this project, thus will focus on containing information relevant to our use case. There might be some sections that deviate from our use case though. This guide will use ***Ubuntu 22.04.1 LTS*** as a base, so syntax will follow those used with that OS. 
 
 **[Vagrant Website](https://www.vagrantup.com/)**
 
@@ -94,3 +94,17 @@ Vagrant 2.2.19
 #...
 ```
 If all this has been successful we have installed ***Vagrant*** on our machine. Congratulations!
+
+### Creating a Project Directory
+
+
+##### Vagrantfile
+More in-dept tutorial information can be found here [Here](https://developer.hashicorp.com/vagrant/docs/vapaths%20in%20order%20for%20a%20Vagrantfile,%20until%20it%20finds%20one:%20/home/mitchellh/projects/foo/Vagrantfile%20/home/mitchellh/projects/Vagrantfile%20/home/mitchellh/Vagrantfile%20/home/Vagrantfilegrantfile).
+
+At this point in the setup process I would advise that we make a directory on our local machine. That directory will be the "base of operations" for everything associated with our project. 
+```
+$ sudo mkdir "name_of_folder" (without quotes)
+```
+After running that command we should have a directory in which we can creat 
+
+Within the Vagranfile we will find what equates to the blueprints for any of our virtual machines that we can run. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
