@@ -99,6 +99,10 @@ If all this has been successful we have installed ***Vagrant*** on our machine. 
 
 More in-dept tutorial information can be found here [Here](https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-project-setup).
 
+##### What is a Vagrantfile?
+A **Vagrantfile** which is essientally what equates to the blueprints for all of the virtual machines that we will be using. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
+
+##### First Time Intialization
 At this point in the setup process I would advise that we make a directory on our local machine. That directory will be the "base of operations" for everything associated with our project. 
 ```
 $ sudo mkdir "name_of_folder" (without quotes)
@@ -108,6 +112,5 @@ After running that command we should have a directory in which we can create the
 ```
 $ vagrant init
 ```
+Before running that command the folder should be empty but afterwards it should be populated with our new **Vagrantfile**. Inside of that file is some useful material that might be a good idea to read. 
 
- 
-The Vagrantfile is essientally what equates to the blueprints for all of the virtual machines that we can run. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
