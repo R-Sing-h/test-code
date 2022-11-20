@@ -51,7 +51,9 @@ Potential use case:
 ```
 $ vagrant halt mothership
 ```
- This will be useful when we need to have servers set up but not running.
+![image](https://user-images.githubusercontent.com/114712045/202931515-d429a229-c8a6-4470-89fe-ed168e94d32f.png)
+
+This will be useful when we need to have servers set up but not running.
  
 ##### **Destroying the Environment**
 If we ever need to completely delete a server we can use command:
