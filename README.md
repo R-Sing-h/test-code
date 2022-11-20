@@ -1,4 +1,5 @@
 <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/150px-Vagrant.png"></p>
+
 ## Vagrant Readme  
 
 This readme will be about using Vagrant for *Project_Artemis* it will not include the downloading and installing of the prerequeistes needed to get the VMs up and running. In our project we are currently have 4 servers. The main server we have designated "Mothership", this server will be in charge of issuing commands to our other three servers. The other three servers are as follows: ***Saltmaster***, ***TDP***, and ***CUI***. The configurations for these machines can be found in the **Vagrantfile** and their configuations can also be editied within that file. We have them set up currently using a Centos OS.
