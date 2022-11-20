@@ -38,7 +38,9 @@ If we successfully log in we will be greeted with a screen that looks like:
 
 Once we are in the server we can now navigate as we normally would. All commands will follow their normal syntax. Logging out of the server can be done with a simple *"Exit"* command in the terminal. This will bring us back to our local terminal. 
 ##### **Halting the Environment**
-Now that we have successfully **started, logged, and exited** the environment we can shut down, or ***"halt"*** it. This will be useful when we need to have servers set up but not running. **THIS CANNOT BE DONE INSIDE OF THE MACHINE THAT NEEDS TO BE SHUT DOWN.**
+We can shut down, or ***"halt"*** the environment with the use of the following command:
+**THIS CANNOT BE DONE INSIDE OF THE MACHINE THAT NEEDS TO BE SHUT DOWN.**
+
 This command will be:
 ```
 $ vagrant halt "Server Name" (without quotes)
@@ -47,3 +49,4 @@ Potential use case:
 ```
 $ vagrant halt mothership
 ```
+ This will be useful when we need to have servers set up but not running.
