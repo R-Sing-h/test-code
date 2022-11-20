@@ -66,5 +66,6 @@ $ vagrant destroy "Server Name" (without quotes)
 $ vagrant destroy mothership
 ```
 ![image](https://user-images.githubusercontent.com/114712045/202931577-ebf40d6a-751e-41bb-a91e-e0581717f892.png)
+
 Using the ***"vagrant destroy"*** command **WILL DELETE** all the files that were stored on that server. 
 
