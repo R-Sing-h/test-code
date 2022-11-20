@@ -28,10 +28,13 @@ For example:
 $ vagrant ssh Mothership
 ```
 ![image](https://user-images.githubusercontent.com/114712045/202923209-fb5e7fc7-4b69-47ad-b577-e05f39d21515.png)
+
 Next we will be prompted for a password:
 ![image](https://user-images.githubusercontent.com/114712045/202923285-c5f76c83-7233-4810-897e-d6b826183a32.png)
+
 If we successfully log in we will be greeted with a screen that looks like:
 ![image](https://user-images.githubusercontent.com/114712045/202923425-d178b9b6-ed8d-42f6-8db3-ca4cdc26dcc3.png)
+
 
 Once we are in the server we can now navigate as we normally would. All commands will follow their normal syntax. Logging out of the server can be done with a simple *"Exit"* command in the terminal. This will bring us back to our local terminal. 
 ##### **Halting the Environment**
