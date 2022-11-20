@@ -1,120 +1,47 @@
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/150px-Vagrant.png"></p>
+## Vagrant Readme  
 
-# Vagrant.readme
-This file will be an overview of the installation and operations of Vagrant. This readme will be specific for our uses within this project, thus will focus on containing information relevant to our use case. There might be some sections that deviate from our use case though. This guide will use ***Ubuntu 22.04.1 LTS*** as a base, so syntax will follow those used with that OS. 
+This readme will be about using Vagrant for *Project_Artemis* it will not include the downloading and installing of the prerequeistes needed to get the VMs up and running. In our project we are currently have 4 servers. The main server we have designated "Mothership", this server will be in charge of issuing commands to our other three servers. The other three servers are as follows: ***Saltmaster***, ***TDP***, and ***CUI***. The configurations for these machines can be found in the **Vagrantfile** and their configuations can also be editied within that file. We have them set up currently using a Centos OS.
+### Virtual Machine Operation
 
-**[Vagrant Website](https://www.vagrantup.com/)**
+####  Commands
 
-**[Source](https://github.com/hashicorp/vagrant)** -Github Page
-
-**[HashiCorp Fourm](https://discuss.hashicorp.com/c/vagrant/24)** 
-
-### Why Vagrant? 
-Vagrant is a tool for building, testing, operating, and distributing development environments. We will be using this in conjunction with **[VirtualBox 6.1.38](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)**  to create, operate, and destroy virtual machines as needed. Although we are going to be using VirtualBox, we can use other forms of VMs such as ***VMware, AWS, OpenStack,*** or in containers such as with ***Docker*** or ***raw LXC*** to create VMS. 
-### Installation 
-
-##### VirtualBox
-Download Page: https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
-Specifically we shall be using **VirtualBox 6.1.38** . This is not the current version of VB. 
-
-Installing VB via the terminal is pretty straight forwards. We will start by running the command:
-
-Installation Information Gathered From [linuxconfig.org](https://linuxconfig.org/install-virtualbox-on-ubuntu-20-04-focal-fossa-linux)
-##### VIA Terminal 
-**Intial Installation**
+##### **Booting up the environment**
+Once the initial boot sequence has been completed, the following command will be used to bring the servers up:
 ```
-$ sudo apt install virtualbox copy 
+$ vagrant up "Server name" (without quotes)
 ```
-**Running VirtualBox**
-```
-$ virtualbox
-```
+and this command will call forth whichever server we want to spin up.
 
-**Extention Pack**
-Additionally there is an extention pack to download, but this is not required for our use case.
+For our use case we will be using the "vagrant up" command to spin up *mothership*, *saltmaster*, *TDP*, or *CUI* servers. An example of this is:
 ```
-$ sudo apt install virtualbox-ext-pack
+$ vagrant up Mothership
 ```
-Then just restart the application.
+In the end this will allow us to quickly spin up extra servers as needed and turn them off when not needed.
 
-##### VIA GNOME Desktop 
-In **Software Store** search for the **"Software"** application.
-<p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/01-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p> 
+##### **Logging in and out of the environment**
+After getting the servers up we can now log in to them. This will be done with a SSH command:
+```
+$ vagrant ssh "server name" (without quotes)
+```
+For example:
+```
+$ vagrant ssh Mothership
+```
+![image](https://user-images.githubusercontent.com/114712045/202923209-fb5e7fc7-4b69-47ad-b577-e05f39d21515.png)
+Next we will be prompted for a password:
+![image](https://user-images.githubusercontent.com/114712045/202923285-c5f76c83-7233-4810-897e-d6b826183a32.png)
+If we successfully log in we will be greeted with a screen that looks like:
+![image](https://user-images.githubusercontent.com/114712045/202923425-d178b9b6-ed8d-42f6-8db3-ca4cdc26dcc3.png)
 
-Search for ***VirtualBox*** making sure the version is not newer than **6.1.xx**, as of 11/13/22 ***Vargant*** is not compatiable will newer versions.
-<p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/02-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p>  
-
-User who is installing must belong to the **SUDO group** to proceed with the software installation the software.
-<p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/04-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p> 
-
-Once installation of ***VirtualBox*** has been completed, we are ready to launch! Have Fun!
-<p><img src="https://linuxconfig.org/wp-content/uploads/2020/03/05-install-virtualbox-on-ubuntu-20-04-focal-fossa-linux.png"></p> 
-
-##### Vagrant
-Installation information gathered from, [https://developer.hashicorp.com/vagrant](https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-install)
-
-Getting started with the Vagrant install we need to first download the actual software. There is no way to do this from the GNOME GUI so we will exvlusively focus on installing through our terminal. 
-
-First we will need to run this command listed below, it will help to prep with the actual [install](https://developer.hashicorp.com/vagrant/downloads). Embedded in that hyperlink is the download page for most supported operating systems. This guide will follow **Ubuntu/Debian** 
+Once we are in the server we can now navigate as we normally would. All commands will follow their normal syntax. Logging out of the server can be done with a simple *"Exit"* command in the terminal. This will bring us back to our local terminal. 
+##### **Halting the Environment**
+Now that we have successfully **started, logged, and exited** the environment we can shut down, or ***"halt"*** it. This will be useful when we need to have servers set up but not running. **THIS CANNOT BE DONE INSIDE OF THE MACHINE THAT NEEDS TO BE SHUT DOWN.**
+This command will be:
 ```
-$ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+$ vagrant halt "Server Name" (without quotes)
 ```
-Following up with the previous command next we will need to run, 
+Potential use case:
 ```
-$ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+$ vagrant halt mothership
 ```
-Lastly we can run the command below to finally install and update the ***Vagrant*** software.
-```
-$ sudo apt update && sudo apt install vagrant
-```
-After the installation is complete we can run the command,
-```
-$ vagrant 
-```
-This should return something along the lines of. If so we have completed the installation of ***Vagrant*** on this machine.
-```
-$ vagrant
-Usage: vagrant [options] <command> [<args>]
-    
-    -v, --version                    Print the version and exit.
-    -h, --help                       Print this help.
-
-# ...
-```
-Additionally we can run,
-```
-vagrant --version 
-```
-which should return (your version might be different):
-```
-$ vagrant --version
-
-Vagrant 2.2.19
-
-#...
-```
-If all this has been successful we have installed ***Vagrant*** on our machine. Congratulations!
-
-### Initialize a Project Directory
-
-More in-dept tutorial information can be found here [Here](https://developer.hashicorp.com/vagrant/tutorials/getting-started/getting-started-project-setup).
-
-##### What is a Vagrantfile?
-A **Vagrantfile** which is essientally what equates to the blueprints for all of the virtual machines that we will be using. This file is in the syntax of a Ruby file, but we do not need to know any Ruby programming language to change make any changes. 
-
-##### First Time Intialization
-At this point in the setup process I would advise that we make a directory on our local machine. That directory will be the "base of operations" for everything associated with our project. 
-```
-$ sudo mkdir "name_of_folder" (without quotes)
-```
-After running that command we should have a directory in which we can create the **Vagrantfile** itself. Navigate to that folder and then we can create the **Vagrantfile** by using the following command.
-
-```
-$ vagrant init
-```
-Before running that command the folder should be empty but afterwards it should be populated with our new **Vagrantfile**. Inside of that file is some useful material that might be a good idea to read. 
-
-![image](https://user-images.githubusercontent.com/114712045/202375711-ba925c96-c49e-47ff-85f5-5c8deba58a74.png)
-
-
-![image](https://user-images.githubusercontent.com/114712045/202923037-98a19776-6d93-4f4f-a7b8-9f5b041c6472.png)
+![image](https://user-images.githubusercontent.com/114712045/202924144-60271dac-7b96-4e2a-8551-e34476d176a8.png)
