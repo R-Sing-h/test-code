@@ -115,3 +115,6 @@ $ vagrant init
 Before running that command the folder should be empty but afterwards it should be populated with our new **Vagrantfile**. Inside of that file is some useful material that might be a good idea to read. 
 
 ![image](https://user-images.githubusercontent.com/114712045/202375711-ba925c96-c49e-47ff-85f5-5c8deba58a74.png)
+
+
+![image](https://user-images.githubusercontent.com/114712045/202923037-98a19776-6d93-4f4f-a7b8-9f5b041c6472.png)
